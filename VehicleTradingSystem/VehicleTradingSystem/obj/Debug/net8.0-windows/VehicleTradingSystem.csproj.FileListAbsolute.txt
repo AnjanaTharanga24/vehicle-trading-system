@@ -104,6 +104,7 @@ D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSyst
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.csproj.AssemblyReference.cache
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.Forms.CustomerForm.resources
+D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.Forms.DashboardForm.resources
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.Forms.LoginForm.resources
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.Forms.RegistrationForm.resources
 D:\projects\esoft\vehicle-trading-system\VehicleTradingSystem\VehicleTradingSystem\obj\Debug\net8.0-windows\VehicleTradingSystem.csproj.GenerateResource.cache

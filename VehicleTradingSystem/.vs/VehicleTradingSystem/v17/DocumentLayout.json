@@ -7,24 +7,36 @@
       "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\addeditvehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\addeditvehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\services\\vehicleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\models\\vehicle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\vehicletradingsystem\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\customerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\vehicleform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|d:\\projects\\esoft\\vehicle-trading-system\\vehicletradingsystem\\vehicletradingsystem\\forms\\transactiondetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F238835-D6A9-4E25-B19A-C19946512114}|VehicleTradingSystem\\VehicleTradingSystem.csproj|solutionrelative:vehicletradingsystem\\forms\\transactiondetailsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,30 +54,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddEditVehicleForm.cs",
+              "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\AddEditVehicleForm.cs",
+              "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\AddEditVehicleForm.cs",
+              "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\AddEditVehicleForm.cs",
+              "RelativeToolTip": "VehicleTradingSystem\\Forms\\AddEditVehicleForm.cs",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAAAGMBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:39:56.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "VehicleService.cs",
+              "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Services\\VehicleService.cs",
+              "RelativeDocumentMoniker": "VehicleTradingSystem\\Services\\VehicleService.cs",
+              "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Services\\VehicleService.cs",
+              "RelativeToolTip": "VehicleTradingSystem\\Services\\VehicleService.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAKsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:38:46.746Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Vehicle.cs",
+              "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Models\\Vehicle.cs",
+              "RelativeDocumentMoniker": "VehicleTradingSystem\\Models\\Vehicle.cs",
+              "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Models\\Vehicle.cs",
+              "RelativeToolTip": "VehicleTradingSystem\\Models\\Vehicle.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAA6wDYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-20T14:36:53.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CustomerService.cs",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Services\\CustomerService.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Services\\CustomerService.cs",
               "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Services\\CustomerService.cs",
               "RelativeToolTip": "VehicleTradingSystem\\Services\\CustomerService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAqwEQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAA8wEQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-20T12:18:45.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Data\\AppDbContext.cs",
               "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Data\\AppDbContext.cs",
               "RelativeToolTip": "VehicleTradingSystem\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwCMAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAABwAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-20T11:36:26.192Z",
               "EditorCaption": ""
@@ -86,26 +129,25 @@
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Models\\Customer.cs",
               "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Models\\Customer.cs",
               "RelativeToolTip": "VehicleTradingSystem\\Models\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-20T11:35:33.839Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "CustomerForm.cs [Design]",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\CustomerForm.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\CustomerForm.cs",
               "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\CustomerForm.cs [Design]",
               "RelativeToolTip": "VehicleTradingSystem\\Forms\\CustomerForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T17:25:18.682Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-07-19T17:25:18.682Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "CustomerForm.cs",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\CustomerForm.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\CustomerForm.cs",
@@ -113,21 +155,7 @@
               "RelativeToolTip": "VehicleTradingSystem\\Forms\\CustomerForm.cs",
               "ViewState": "AgIAAJIBAAAAAAAAAAAUwJIBAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T16:44:20.865Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "VehicleForm.cs",
-              "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\VehicleForm.cs",
-              "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\VehicleForm.cs",
-              "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\VehicleForm.cs",
-              "RelativeToolTip": "VehicleTradingSystem\\Forms\\VehicleForm.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAAuwOsAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T16:43:57.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T16:44:20.865Z"
             },
             {
               "$type": "Document",
@@ -137,14 +165,14 @@
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\DashboardForm.cs",
               "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\DashboardForm.cs",
               "RelativeToolTip": "VehicleTradingSystem\\Forms\\DashboardForm.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAAwKgAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAAYCAAAAAAAAAAAQwBUCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T15:31:37.887Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "Register.cs",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\Register.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\Register.cs",
@@ -152,25 +180,11 @@
               "RelativeToolTip": "VehicleTradingSystem\\Forms\\Register.cs",
               "ViewState": "AgIAAOACAAAAAAAAAAAUwPYCAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T14:56:06.132Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T14:56:06.132Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TransactionDetailsForm.cs",
-              "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\TransactionDetailsForm.cs",
-              "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\TransactionDetailsForm.cs",
-              "ToolTip": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\TransactionDetailsForm.cs",
-              "RelativeToolTip": "VehicleTradingSystem\\Forms\\TransactionDetailsForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T16:45:08.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\projects\\esoft\\vehicle-trading-system\\VehicleTradingSystem\\VehicleTradingSystem\\Forms\\Login.cs",
               "RelativeDocumentMoniker": "VehicleTradingSystem\\Forms\\Login.cs",
@@ -178,8 +192,7 @@
               "RelativeToolTip": "VehicleTradingSystem\\Forms\\Login.cs",
               "ViewState": "AgIAAN8AAAAAAAAAAAAqwO8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T14:35:16.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T14:35:16.2Z"
             }
           ]
         }
