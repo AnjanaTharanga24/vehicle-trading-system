@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Net;
 using System.Windows.Forms;
+using VehicleTradingSystem.Services;
+using VehicleTradingSystem.Models;
 
 namespace VehicleTradingSystem.Forms
 {
@@ -18,10 +20,12 @@ namespace VehicleTradingSystem.Forms
         private Button btnLogin;
         private Button btnExit;
         private LinkLabel lnkRegister;
+        private readonly CustomerService _customerService;
 
         public LoginForm()
         {
             InitializeComponent();
+            _customerService = new CustomerService();
         }
 
         private void InitializeComponent()
@@ -44,12 +48,12 @@ namespace VehicleTradingSystem.Forms
 
             // LoginForm
             this.ClientSize = new Size(450, 400);
-            this.Text = "Login - Vehicle buying and selling System";
+            this.Text = "Login - Vehicle Trading System";
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.BackColor = Color.White;
-            this.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new Font("Times New Roman", 12F);
 
             // pictureBox1
             this.pictureBox1.Location = new Point(150, 20);
@@ -59,7 +63,6 @@ namespace VehicleTradingSystem.Forms
             this.pictureBox1.BackColor = Color.LightBlue;
             this.pictureBox1.BorderStyle = BorderStyle.FixedSingle;
 
-            // Load image from URL
             try
             {
                 WebRequest request = WebRequest.Create("https://logodix.com/logo/1342321.png");
@@ -80,9 +83,9 @@ namespace VehicleTradingSystem.Forms
             this.lblTitle.Font = new Font("Times New Roman", 16F, FontStyle.Bold);
             this.lblTitle.ForeColor = Color.DarkBlue;
             this.lblTitle.Location = new Point(80, 110);
-            this.lblTitle.Size = new Size(190, 25);
+            this.lblTitle.Size = new Size(290, 25);
             this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "Vehicle buying and selling System";
+            this.lblTitle.Text = "Vehicle Trading System Login";
 
             // groupBox1
             this.groupBox1.Controls.Add(this.lblUsername);
@@ -92,7 +95,7 @@ namespace VehicleTradingSystem.Forms
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnLogin);
             this.groupBox1.Controls.Add(this.btnExit);
-            this.groupBox1.Font = new Font("Times New Roman", 12F, FontStyle.Regular);
+            this.groupBox1.Font = new Font("Times New Roman", 12F);
             this.groupBox1.Location = new Point(50, 150);
             this.groupBox1.Size = new Size(350, 200);
             this.groupBox1.TabIndex = 2;
@@ -110,7 +113,6 @@ namespace VehicleTradingSystem.Forms
             this.txtUsername.Location = new Point(130, 37);
             this.txtUsername.Size = new Size(180, 26);
             this.txtUsername.TabIndex = 1;
-            this.txtUsername.Font = new Font("Times New Roman", 12F);
 
             // lblPassword
             this.lblPassword.AutoSize = true;
@@ -124,7 +126,6 @@ namespace VehicleTradingSystem.Forms
             this.txtPassword.Size = new Size(180, 26);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Font = new Font("Times New Roman", 12F);
 
             // btnClear
             this.btnClear.BackColor = Color.Orange;
@@ -163,11 +164,11 @@ namespace VehicleTradingSystem.Forms
 
             // lnkRegister
             this.lnkRegister.AutoSize = true;
-            this.lnkRegister.Location = new Point(180, 360);
-            this.lnkRegister.Size = new Size(90, 19);
+            this.lnkRegister.Location = new Point(150, 360);
+            this.lnkRegister.Size = new Size(150, 19);
             this.lnkRegister.TabIndex = 7;
             this.lnkRegister.TabStop = true;
-            this.lnkRegister.Text = "New User? Register";
+            this.lnkRegister.Text = "New User? Register Here";
             this.lnkRegister.LinkClicked += new LinkLabelLinkClickedEventHandler(this.lnkRegister_LinkClicked);
 
             // Add controls to form
@@ -199,16 +200,38 @@ namespace VehicleTradingSystem.Forms
                 return;
             }
 
-            // Navigate to Dashboard after successful login
-            this.Hide();
-            DashboardForm dashboard = new DashboardForm();
-            dashboard.FormClosed += (s, args) => this.Close();
-            dashboard.Show();
+            try
+            {
+                var customer = _customerService.Authenticate(txtUsername.Text, txtPassword.Text);
+
+                if (customer != null)
+                {
+                    MessageBox.Show($"Welcome back, {customer.FirstName}!", "Login Successful",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.Hide();
+                    DashboardForm dashboard = new DashboardForm(customer);
+                    dashboard.FormClosed += (s, args) => this.Close();
+                    dashboard.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid username or password", "Login Failed",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPassword.Clear();
+                    txtPassword.Focus();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error during login: {ex.Message}", "Login Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure, Do you really want to Exit...?",
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?",
                 "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -219,7 +242,6 @@ namespace VehicleTradingSystem.Forms
 
         private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            // Open registration form
             this.Hide();
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.FormClosed += (s, args) => this.Show();

@@ -2,13 +2,15 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using VehicleTradingSystem.Models;
+using VehicleTradingSystem.Services;
 
 namespace VehicleTradingSystem.Forms
 {
     public partial class RegistrationForm : Form
     {
+        // Controls declaration
         private Label lblTitle;
-        private GroupBox gbCustomerRegistration;
         private GroupBox gbPersonalDetails;
         private GroupBox gbContactDetails;
         private GroupBox gbPreferences;
@@ -21,7 +23,6 @@ namespace VehicleTradingSystem.Forms
         private Label lblNIC;
         private Label lblGender;
         private Label lblDateOfBirth;
-
         private ComboBox cmbCustomerID;
         private TextBox txtFirstName;
         private TextBox txtLastName;
@@ -34,7 +35,6 @@ namespace VehicleTradingSystem.Forms
         private Label lblEmail;
         private Label lblMobilePhone;
         private Label lblAddress;
-
         private TextBox txtEmail;
         private TextBox txtMobilePhone;
         private TextBox txtAddress;
@@ -42,7 +42,6 @@ namespace VehicleTradingSystem.Forms
         // Preferences
         private Label lblVehicleType;
         private Label lblBudgetRange;
-
         private ComboBox cmbVehicleType;
         private ComboBox cmbBudgetRange;
 
@@ -50,7 +49,6 @@ namespace VehicleTradingSystem.Forms
         private Label lblUsername;
         private Label lblPassword;
         private Label lblConfirmPassword;
-
         private TextBox txtUsername;
         private TextBox txtPassword;
         private TextBox txtConfirmPassword;
@@ -65,17 +63,20 @@ namespace VehicleTradingSystem.Forms
         private LinkLabel lnkBackToLogin;
         private LinkLabel lnkExit;
 
+        private readonly CustomerService _customerService;
+
         public RegistrationForm()
         {
             InitializeComponent();
+            _customerService = new CustomerService();
             PopulateComboBoxes();
+            LoadCustomerData();
         }
 
         private void InitializeComponent()
         {
             // Initialize all controls
             this.lblTitle = new Label();
-            this.gbCustomerRegistration = new GroupBox();
             this.gbPersonalDetails = new GroupBox();
             this.gbContactDetails = new GroupBox();
             this.gbPreferences = new GroupBox();
@@ -88,7 +89,6 @@ namespace VehicleTradingSystem.Forms
             this.lblNIC = new Label();
             this.lblGender = new Label();
             this.lblDateOfBirth = new Label();
-
             this.cmbCustomerID = new ComboBox();
             this.txtFirstName = new TextBox();
             this.txtLastName = new TextBox();
@@ -101,7 +101,6 @@ namespace VehicleTradingSystem.Forms
             this.lblEmail = new Label();
             this.lblMobilePhone = new Label();
             this.lblAddress = new Label();
-
             this.txtEmail = new TextBox();
             this.txtMobilePhone = new TextBox();
             this.txtAddress = new TextBox();
@@ -109,7 +108,6 @@ namespace VehicleTradingSystem.Forms
             // Preferences Controls
             this.lblVehicleType = new Label();
             this.lblBudgetRange = new Label();
-
             this.cmbVehicleType = new ComboBox();
             this.cmbBudgetRange = new ComboBox();
 
@@ -117,7 +115,6 @@ namespace VehicleTradingSystem.Forms
             this.lblUsername = new Label();
             this.lblPassword = new Label();
             this.lblConfirmPassword = new Label();
-
             this.txtUsername = new TextBox();
             this.txtPassword = new TextBox();
             this.txtConfirmPassword = new TextBox();
@@ -132,26 +129,25 @@ namespace VehicleTradingSystem.Forms
             this.lnkBackToLogin = new LinkLabel();
             this.lnkExit = new LinkLabel();
 
+            // Form Settings
             this.SuspendLayout();
-
-            // ==================== FORM SETTINGS ====================
             this.ClientSize = new Size(900, 800);
-            this.Text = "Customer Registration - Vehicle buying and selling System";
+            this.Text = "Customer Registration - Vehicle Trading System";
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.BackColor = Color.White;
             this.Font = new Font("Times New Roman", 10F);
 
-            // ==================== TITLE ====================
-            this.lblTitle.Text = "Vehicle buying and selling System - Customer Registration";
+            // Title Label
+            this.lblTitle.Text = "Vehicle Trading System - Customer Registration";
             this.lblTitle.Font = new Font("Times New Roman", 20F, FontStyle.Bold);
             this.lblTitle.ForeColor = Color.DarkBlue;
             this.lblTitle.Location = new Point(180, 20);
             this.lblTitle.Size = new Size(540, 31);
             this.lblTitle.TextAlign = ContentAlignment.MiddleCenter;
 
-            // ==================== PERSONAL DETAILS GROUP ====================
+            // Personal Details Group
             this.gbPersonalDetails.Text = "Personal Details";
             this.gbPersonalDetails.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.gbPersonalDetails.Location = new Point(30, 70);
@@ -243,7 +239,7 @@ namespace VehicleTradingSystem.Forms
             this.gbPersonalDetails.Controls.Add(this.lblDateOfBirth);
             this.gbPersonalDetails.Controls.Add(this.dtpDateOfBirth);
 
-            // ==================== CONTACT DETAILS GROUP ====================
+            // Contact Details Group
             this.gbContactDetails.Text = "Contact Details";
             this.gbContactDetails.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.gbContactDetails.Location = new Point(450, 70);
@@ -290,7 +286,7 @@ namespace VehicleTradingSystem.Forms
             this.gbContactDetails.Controls.Add(this.lblAddress);
             this.gbContactDetails.Controls.Add(this.txtAddress);
 
-            // ==================== PREFERENCES GROUP ====================
+            // Preferences Group
             this.gbPreferences.Text = "Vehicle Preferences (Optional)";
             this.gbPreferences.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.gbPreferences.Location = new Point(450, 290);
@@ -325,7 +321,7 @@ namespace VehicleTradingSystem.Forms
             this.gbPreferences.Controls.Add(this.lblBudgetRange);
             this.gbPreferences.Controls.Add(this.cmbBudgetRange);
 
-            // ==================== ACCOUNT DETAILS GROUP ====================
+            // Account Details Group
             this.gbAccountDetails.Text = "Account Details";
             this.gbAccountDetails.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.gbAccountDetails.Location = new Point(30, 370);
@@ -372,7 +368,7 @@ namespace VehicleTradingSystem.Forms
             this.gbAccountDetails.Controls.Add(this.lblConfirmPassword);
             this.gbAccountDetails.Controls.Add(this.txtConfirmPassword);
 
-            // ==================== BUTTONS ====================
+            // Buttons
             this.btnRegister.Text = "Register";
             this.btnRegister.Location = new Point(450, 430);
             this.btnRegister.Size = new Size(100, 40);
@@ -380,7 +376,7 @@ namespace VehicleTradingSystem.Forms
             this.btnRegister.ForeColor = Color.White;
             this.btnRegister.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.btnRegister.FlatStyle = FlatStyle.Flat;
-            this.btnRegister.Click += new EventHandler(this.btnRegister_Click);
+            this.btnRegister.Click += new EventHandler(this.BtnRegister_Click);
 
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Location = new Point(570, 430);
@@ -389,7 +385,7 @@ namespace VehicleTradingSystem.Forms
             this.btnUpdate.ForeColor = Color.White;
             this.btnUpdate.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.btnUpdate.FlatStyle = FlatStyle.Flat;
-            this.btnUpdate.Click += new EventHandler(this.btnUpdate_Click);
+            this.btnUpdate.Click += new EventHandler(this.BtnUpdate_Click);
 
             this.btnClear.Text = "Clear";
             this.btnClear.Location = new Point(450, 490);
@@ -398,7 +394,7 @@ namespace VehicleTradingSystem.Forms
             this.btnClear.ForeColor = Color.White;
             this.btnClear.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.btnClear.FlatStyle = FlatStyle.Flat;
-            this.btnClear.Click += new EventHandler(this.btnClear_Click);
+            this.btnClear.Click += new EventHandler(this.BtnClear_Click);
 
             this.btnDelete.Text = "Delete";
             this.btnDelete.Location = new Point(570, 490);
@@ -407,22 +403,22 @@ namespace VehicleTradingSystem.Forms
             this.btnDelete.ForeColor = Color.White;
             this.btnDelete.Font = new Font("Times New Roman", 12F, FontStyle.Bold);
             this.btnDelete.FlatStyle = FlatStyle.Flat;
-            this.btnDelete.Click += new EventHandler(this.btnDelete_Click);
+            this.btnDelete.Click += new EventHandler(this.BtnDelete_Click);
 
-            // ==================== NAVIGATION LINKS ====================
+            // Navigation Links
             this.lnkBackToLogin.Text = "← Back to Login";
             this.lnkBackToLogin.Location = new Point(30, 560);
             this.lnkBackToLogin.Size = new Size(120, 20);
             this.lnkBackToLogin.Font = new Font("Times New Roman", 11F);
-            this.lnkBackToLogin.LinkClicked += new LinkLabelLinkClickedEventHandler(this.lnkBackToLogin_LinkClicked);
+            this.lnkBackToLogin.LinkClicked += new LinkLabelLinkClickedEventHandler(this.LnkBackToLogin_LinkClicked);
 
             this.lnkExit.Text = "Exit Application";
             this.lnkExit.Location = new Point(160, 560);
             this.lnkExit.Size = new Size(120, 20);
             this.lnkExit.Font = new Font("Times New Roman", 11F);
-            this.lnkExit.LinkClicked += new LinkLabelLinkClickedEventHandler(this.lnkExit_LinkClicked);
+            this.lnkExit.LinkClicked += new LinkLabelLinkClickedEventHandler(this.LnkExit_LinkClicked);
 
-            // ==================== ADD CONTROLS TO FORM ====================
+            // Add controls to Form
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.gbPersonalDetails);
             this.Controls.Add(this.gbContactDetails);
@@ -478,23 +474,94 @@ namespace VehicleTradingSystem.Forms
             cmbBudgetRange.SelectedIndex = 0;
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void LoadCustomerData()
         {
-            if (ValidateForm())
-            {
-                // Here you would typically save to database
-                MessageBox.Show($"Customer registration successful!\n\n" +
-                    $"Customer ID: {cmbCustomerID.Text}\n" +
-                    $"Name: {txtFirstName.Text} {txtLastName.Text}\n" +
-                    $"Email: {txtEmail.Text}\n" +
-                    $"Mobile: {txtMobilePhone.Text}",
-                    "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            cmbCustomerID.SelectedIndexChanged += new EventHandler(CmbCustomerID_SelectedIndexChanged);
+        }
 
-                ClearForm();
+        private void CmbCustomerID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedId = cmbCustomerID.Text;
+            if (!string.IsNullOrEmpty(selectedId))
+            {
+                var customer = _customerService.GetCustomerById(selectedId);
+                if (customer != null)
+                {
+                    txtFirstName.Text = customer.FirstName;
+                    txtLastName.Text = customer.LastName;
+                    txtNIC.Text = customer.NIC;
+                    rbMale.Checked = customer.Gender == "Male";
+                    rbFemale.Checked = customer.Gender == "Female";
+                    dtpDateOfBirth.Value = customer.DateOfBirth;
+                    txtEmail.Text = customer.Email;
+                    txtMobilePhone.Text = customer.MobilePhone;
+                    txtAddress.Text = customer.Address;
+                    txtUsername.Text = customer.Username;
+                    txtPassword.Text = customer.Password;
+                    txtConfirmPassword.Text = customer.Password;
+
+                    if (!string.IsNullOrEmpty(customer.PreferredVehicleType))
+                    {
+                        cmbVehicleType.SelectedItem = customer.PreferredVehicleType;
+                    }
+                    else
+                    {
+                        cmbVehicleType.SelectedIndex = 0;
+                    }
+
+                    if (!string.IsNullOrEmpty(customer.BudgetRange))
+                    {
+                        cmbBudgetRange.SelectedItem = customer.BudgetRange;
+                    }
+                    else
+                    {
+                        cmbBudgetRange.SelectedIndex = 0;
+                    }
+                }
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void BtnRegister_Click(object sender, EventArgs e)
+        {
+            if (ValidateForm())
+            {
+                var customer = new Customer
+                {
+                    CustomerID = cmbCustomerID.Text,
+                    FirstName = txtFirstName.Text,
+                    LastName = txtLastName.Text,
+                    NIC = txtNIC.Text,
+                    Gender = rbMale.Checked ? "Male" : "Female",
+                    DateOfBirth = dtpDateOfBirth.Value,
+                    Email = txtEmail.Text,
+                    MobilePhone = txtMobilePhone.Text,
+                    Address = txtAddress.Text,
+                    PreferredVehicleType = cmbVehicleType.SelectedIndex > 0 ? cmbVehicleType.Text : null,
+                    BudgetRange = cmbBudgetRange.SelectedIndex > 0 ? cmbBudgetRange.Text : null,
+                    Username = txtUsername.Text,
+                    Password = txtPassword.Text
+                };
+
+                if (_customerService.AddCustomer(customer))
+                {
+                    MessageBox.Show($"Customer registration successful!\n\n" +
+                        $"Customer ID: {customer.CustomerID}\n" +
+                        $"Name: {customer.FirstName} {customer.LastName}\n" +
+                        $"Email: {customer.Email}\n" +
+                        $"Mobile: {customer.MobilePhone}",
+                        "Registration Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    ClearForm();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to register customer. The Customer ID might already exist.",
+                        "Registration Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
         {
             if (ValidateForm())
             {
@@ -503,18 +570,43 @@ namespace VehicleTradingSystem.Forms
 
                 if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Customer record updated successfully!",
-                        "Update Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var customer = new Customer
+                    {
+                        CustomerID = cmbCustomerID.Text,
+                        FirstName = txtFirstName.Text,
+                        LastName = txtLastName.Text,
+                        NIC = txtNIC.Text,
+                        Gender = rbMale.Checked ? "Male" : "Female",
+                        DateOfBirth = dtpDateOfBirth.Value,
+                        Email = txtEmail.Text,
+                        MobilePhone = txtMobilePhone.Text,
+                        Address = txtAddress.Text,
+                        PreferredVehicleType = cmbVehicleType.SelectedIndex > 0 ? cmbVehicleType.Text : null,
+                        BudgetRange = cmbBudgetRange.SelectedIndex > 0 ? cmbBudgetRange.Text : null,
+                        Username = txtUsername.Text,
+                        Password = txtPassword.Text
+                    };
+
+                    if (_customerService.UpdateCustomer(customer))
+                    {
+                        MessageBox.Show("Customer record updated successfully!",
+                            "Update Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update customer record. Please try again.",
+                            "Update Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void BtnClear_Click(object sender, EventArgs e)
         {
             ClearForm();
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(cmbCustomerID.Text))
             {
@@ -528,13 +620,21 @@ namespace VehicleTradingSystem.Forms
 
             if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Customer record deleted successfully!", "Delete Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                ClearForm();
+                if (_customerService.DeleteCustomer(cmbCustomerID.Text))
+                {
+                    MessageBox.Show("Customer record deleted successfully!", "Delete Success",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ClearForm();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete customer record. Please try again.",
+                        "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
-        private void lnkBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LnkBackToLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
             LoginForm loginForm = new LoginForm();
@@ -542,7 +642,7 @@ namespace VehicleTradingSystem.Forms
             loginForm.Show();
         }
 
-        private void lnkExit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void LnkExit_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to exit the application?",
                 "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -555,7 +655,6 @@ namespace VehicleTradingSystem.Forms
 
         private bool ValidateForm()
         {
-            // Check required fields
             if (string.IsNullOrWhiteSpace(txtFirstName.Text))
             {
                 MessageBox.Show("Please enter First Name.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -584,7 +683,6 @@ namespace VehicleTradingSystem.Forms
                 return false;
             }
 
-            // Validate email format
             if (!IsValidEmail(txtEmail.Text))
             {
                 MessageBox.Show("Please enter a valid email address.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -599,7 +697,6 @@ namespace VehicleTradingSystem.Forms
                 return false;
             }
 
-            // Validate mobile number (basic validation)
             if (!IsValidMobileNumber(txtMobilePhone.Text))
             {
                 MessageBox.Show("Please enter a valid mobile number (digits only, 10-15 characters).", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -658,7 +755,6 @@ namespace VehicleTradingSystem.Forms
 
         private void ClearForm()
         {
-            // Clear Personal Details
             if (cmbCustomerID.Items.Count > 0)
                 cmbCustomerID.SelectedIndex = 0;
             txtFirstName.Clear();
@@ -666,22 +762,14 @@ namespace VehicleTradingSystem.Forms
             txtNIC.Clear();
             rbMale.Checked = true;
             dtpDateOfBirth.Value = DateTime.Now.AddYears(-25);
-
-            // Clear Contact Details
             txtEmail.Clear();
             txtMobilePhone.Clear();
             txtAddress.Clear();
-
-            // Clear Preferences
             cmbVehicleType.SelectedIndex = 0;
             cmbBudgetRange.SelectedIndex = 0;
-
-            // Clear Account Details
             txtUsername.Clear();
             txtPassword.Clear();
             txtConfirmPassword.Clear();
-
-            // Set focus to first field
             txtFirstName.Focus();
         }
     }
