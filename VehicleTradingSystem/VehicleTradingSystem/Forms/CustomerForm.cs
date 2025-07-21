@@ -52,207 +52,40 @@ namespace VehicleTradingSystem.Forms
 
         private void InitializeComponent()
         {
-            // Main Form Settings
-            this.ClientSize = new Size(600, 550);
-            this.Text = "Add New Customer";
-            this.StartPosition = FormStartPosition.CenterParent;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.BackColor = Color.WhiteSmoke;
-            this.Padding = new Padding(10);
-
-            // Title Label
-            lblTitle = new Label
-            {
-                Text = "Add New Customer",
-                Font = new Font("Segoe UI", 16F, FontStyle.Bold),
-                ForeColor = Color.DarkBlue,
-                Dock = DockStyle.Top,
-                Height = 50,
-                TextAlign = ContentAlignment.MiddleCenter
-            };
-
-            // Form Panel
-            panelForm = new Panel
-            {
-                Dock = DockStyle.Fill,
-                AutoScroll = true
-            };
-
-            // First Name
-            lblFirstName = new Label
-            {
-                Text = "First Name:",
-                Location = new Point(30, 20),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtFirstName = new TextBox
-            {
-                Location = new Point(160, 20),
-                Size = new Size(350, 30),
-                MaxLength = 50
-            };
-
-            // Last Name
-            lblLastName = new Label
-            {
-                Text = "Last Name:",
-                Location = new Point(30, 60),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtLastName = new TextBox
-            {
-                Location = new Point(160, 60),
-                Size = new Size(350, 30),
-                MaxLength = 50
-            };
-
-            // Email
-            lblEmail = new Label
-            {
-                Text = "Email:",
-                Location = new Point(30, 100),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtEmail = new TextBox
-            {
-                Location = new Point(160, 100),
-                Size = new Size(350, 30),
-                MaxLength = 100
-            };
-
-            // Phone
-            lblPhone = new Label
-            {
-                Text = "Phone:",
-                Location = new Point(30, 140),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtPhone = new MaskedTextBox
-            {
-                Location = new Point(160, 140),
-                Size = new Size(350, 30),
-                Mask = "(999) 000-0000"
-            };
-
-            // Address
-            lblAddress = new Label
-            {
-                Text = "Address:",
-                Location = new Point(30, 180),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtAddress = new TextBox
-            {
-                Location = new Point(160, 180),
-                Size = new Size(350, 30),
-                MaxLength = 100
-            };
-
-            // City
-            lblCity = new Label
-            {
-                Text = "City:",
-                Location = new Point(30, 220),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtCity = new TextBox
-            {
-                Location = new Point(160, 220),
-                Size = new Size(350, 30),
-                MaxLength = 50
-            };
-
-            // State
-            lblState = new Label
-            {
-                Text = "State:",
-                Location = new Point(30, 260),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            cmbState = new ComboBox
-            {
-                Location = new Point(160, 260),
-                Size = new Size(150, 30),
-                DropDownStyle = ComboBoxStyle.DropDownList
-            };
-            LoadStates();
-
-            // Zip Code
-            lblZipCode = new Label
-            {
-                Text = "Zip Code:",
-                Location = new Point(30, 300),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            txtZipCode = new TextBox
-            {
-                Location = new Point(160, 300),
-                Size = new Size(150, 30),
-                MaxLength = 10
-            };
-
-            // Customer Since
-            lblCustomerSince = new Label
-            {
-                Text = "Customer Since:",
-                Location = new Point(30, 340),
-                Width = 120,
-                TextAlign = ContentAlignment.MiddleRight
-            };
-
-            dtpCustomerSince = new DateTimePicker
-            {
-                Location = new Point(160, 340),
-                Size = new Size(150, 30),
-                Format = DateTimePickerFormat.Short
-            };
-
-            // Buttons
-            btnSave = new Button
-            {
-                Text = "Save",
-                BackColor = Color.Green,
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
-                Location = new Point(160, 400),
-                Size = new Size(120, 40),
-                DialogResult = DialogResult.OK
-            };
-            btnSave.Click += BtnSave_Click;
-
-            btnCancel = new Button
-            {
-                Text = "Cancel",
-                BackColor = Color.Red,
-                ForeColor = Color.White,
-                FlatStyle = FlatStyle.Flat,
-                Font = new Font("Segoe UI", 10F, FontStyle.Bold),
-                Location = new Point(300, 400),
-                Size = new Size(120, 40),
-                DialogResult = DialogResult.Cancel
-            };
-            btnCancel.Click += BtnCancel_Click;
-
-            // Add controls to panel
+            lblTitle = new Label();
+            panelForm = new Panel();
+            lblFirstName = new Label();
+            txtFirstName = new TextBox();
+            lblLastName = new Label();
+            txtLastName = new TextBox();
+            lblEmail = new Label();
+            txtEmail = new TextBox();
+            lblPhone = new Label();
+            txtPhone = new MaskedTextBox();
+            lblAddress = new Label();
+            txtAddress = new TextBox();
+            lblCity = new Label();
+            txtCity = new TextBox();
+            lblState = new Label();
+            cmbState = new ComboBox();
+            lblZipCode = new Label();
+            txtZipCode = new TextBox();
+            lblCustomerSince = new Label();
+            dtpCustomerSince = new DateTimePicker();
+            btnSave = new Button();
+            btnCancel = new Button();
+            panelForm.SuspendLayout();
+            SuspendLayout();
+            // 
+            // lblTitle
+            // 
+            lblTitle.Location = new Point(0, 0);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(100, 23);
+            lblTitle.TabIndex = 0;
+            // 
+            // panelForm
+            // 
             panelForm.Controls.Add(lblFirstName);
             panelForm.Controls.Add(txtFirstName);
             panelForm.Controls.Add(lblLastName);
@@ -273,14 +106,172 @@ namespace VehicleTradingSystem.Forms
             panelForm.Controls.Add(dtpCustomerSince);
             panelForm.Controls.Add(btnSave);
             panelForm.Controls.Add(btnCancel);
-
-            // Add controls to form
-            this.Controls.Add(lblTitle);
-            this.Controls.Add(panelForm);
-
-            // Set accept and cancel buttons
-            this.AcceptButton = btnSave;
-            this.CancelButton = btnCancel;
+            panelForm.Location = new Point(0, 0);
+            panelForm.Name = "panelForm";
+            panelForm.Size = new Size(200, 100);
+            panelForm.TabIndex = 1;
+            // 
+            // lblFirstName
+            // 
+            lblFirstName.Location = new Point(0, 0);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new Size(100, 23);
+            lblFirstName.TabIndex = 0;
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.Location = new Point(0, 0);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(100, 27);
+            txtFirstName.TabIndex = 1;
+            // 
+            // lblLastName
+            // 
+            lblLastName.Location = new Point(0, 0);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new Size(100, 23);
+            lblLastName.TabIndex = 2;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Location = new Point(0, 0);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(100, 27);
+            txtLastName.TabIndex = 3;
+            // 
+            // lblEmail
+            // 
+            lblEmail.Location = new Point(0, 0);
+            lblEmail.Name = "lblEmail";
+            lblEmail.Size = new Size(100, 23);
+            lblEmail.TabIndex = 4;
+            // 
+            // txtEmail
+            // 
+            txtEmail.Location = new Point(0, 0);
+            txtEmail.Name = "txtEmail";
+            txtEmail.Size = new Size(100, 27);
+            txtEmail.TabIndex = 5;
+            // 
+            // lblPhone
+            // 
+            lblPhone.Location = new Point(0, 0);
+            lblPhone.Name = "lblPhone";
+            lblPhone.Size = new Size(100, 23);
+            lblPhone.TabIndex = 6;
+            // 
+            // txtPhone
+            // 
+            txtPhone.Location = new Point(0, 0);
+            txtPhone.Name = "txtPhone";
+            txtPhone.Size = new Size(100, 27);
+            txtPhone.TabIndex = 7;
+            // 
+            // lblAddress
+            // 
+            lblAddress.Location = new Point(0, 0);
+            lblAddress.Name = "lblAddress";
+            lblAddress.Size = new Size(100, 23);
+            lblAddress.TabIndex = 8;
+            // 
+            // txtAddress
+            // 
+            txtAddress.Location = new Point(0, 0);
+            txtAddress.Name = "txtAddress";
+            txtAddress.Size = new Size(100, 27);
+            txtAddress.TabIndex = 9;
+            // 
+            // lblCity
+            // 
+            lblCity.Location = new Point(0, 0);
+            lblCity.Name = "lblCity";
+            lblCity.Size = new Size(100, 23);
+            lblCity.TabIndex = 10;
+            // 
+            // txtCity
+            // 
+            txtCity.Location = new Point(0, 0);
+            txtCity.Name = "txtCity";
+            txtCity.Size = new Size(100, 27);
+            txtCity.TabIndex = 11;
+            // 
+            // lblState
+            // 
+            lblState.Location = new Point(0, 0);
+            lblState.Name = "lblState";
+            lblState.Size = new Size(100, 23);
+            lblState.TabIndex = 12;
+            // 
+            // cmbState
+            // 
+            cmbState.Location = new Point(0, 0);
+            cmbState.Name = "cmbState";
+            cmbState.Size = new Size(121, 28);
+            cmbState.TabIndex = 13;
+            // 
+            // lblZipCode
+            // 
+            lblZipCode.Location = new Point(0, 0);
+            lblZipCode.Name = "lblZipCode";
+            lblZipCode.Size = new Size(100, 23);
+            lblZipCode.TabIndex = 14;
+            // 
+            // txtZipCode
+            // 
+            txtZipCode.Location = new Point(0, 0);
+            txtZipCode.Name = "txtZipCode";
+            txtZipCode.Size = new Size(100, 27);
+            txtZipCode.TabIndex = 15;
+            // 
+            // lblCustomerSince
+            // 
+            lblCustomerSince.Location = new Point(0, 0);
+            lblCustomerSince.Name = "lblCustomerSince";
+            lblCustomerSince.Size = new Size(100, 23);
+            lblCustomerSince.TabIndex = 16;
+            // 
+            // dtpCustomerSince
+            // 
+            dtpCustomerSince.Location = new Point(0, 0);
+            dtpCustomerSince.Name = "dtpCustomerSince";
+            dtpCustomerSince.Size = new Size(200, 27);
+            dtpCustomerSince.TabIndex = 17;
+            // 
+            // btnSave
+            // 
+            btnSave.Location = new Point(0, 0);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(75, 23);
+            btnSave.TabIndex = 18;
+            btnSave.Click += BtnSave_Click;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(0, 0);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(75, 23);
+            btnCancel.TabIndex = 19;
+            btnCancel.Click += BtnCancel_Click;
+            // 
+            // CustomerForm
+            // 
+            AcceptButton = btnSave;
+            BackColor = Color.WhiteSmoke;
+            CancelButton = btnCancel;
+            ClientSize = new Size(600, 550);
+            Controls.Add(lblTitle);
+            Controls.Add(panelForm);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "CustomerForm";
+            Padding = new Padding(10);
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Add New Customer";
+            Load += CustomerForm_Load;
+            panelForm.ResumeLayout(false);
+            panelForm.PerformLayout();
+            ResumeLayout(false);
         }
 
         private void LoadStates()
@@ -424,6 +415,11 @@ namespace VehicleTradingSystem.Forms
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CustomerForm_Load(object sender, EventArgs e)
+        {
+
         }
         #endregion
 
